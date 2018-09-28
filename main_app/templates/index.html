@@ -6,6 +6,13 @@
 <body>
 	<h1>CatCollect</h1>
 	<br />
+	{% for cat in cats %}
+		<p>Name: {{ cat.name }} </p>
+		<p>Age: {{ cat.age }}</p>
+		<p>Description: {{ cat.description }} </p>
+		<p>Breed: {{ cat.breed }}</p>
+		<br />
+	{% endfor %}
 	<footer>All Rights Reserved, Cat Collectr 2018</footer>
 </body>
 </html>
