@@ -9,7 +9,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 def index(request):
 	cats = Cat.objects.all()
-	return render(request, 'index.html', {'cats': cats})
+	form = CatForm()
+	return render(request, 'index.html', {'cats': cats, 'form':form})
 
 def show(request, cat_id):
 	cat = Cat.objects.get(id=cat_id)
