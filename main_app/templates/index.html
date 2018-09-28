@@ -1,14 +1,7 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-	<title>CatCollectr</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
-</head>
-<body>
-	<h1>CatCollect</h1>
-	<br />
+	
+	{% block content %}
 	{% for cat in cats %}
 		<a href="/{{cat.id}}">
 			<p>Name: {{ cat.name }}</p>
@@ -25,6 +18,4 @@
 		<br />
 		<hr />
 	{% endfor %}
-	<footer>All Rights Reserved, Cat Collectr 2018</footer>
-</body>
-</html>
+	{% endblock %}
