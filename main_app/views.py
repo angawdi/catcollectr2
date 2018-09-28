@@ -11,7 +11,7 @@ class Cat:
 
 cats = [
 	Cat('Lolo', 'tabby', 'foul little demon', 3),
-	Cat('Sachi', 'tortoise shell', 'diluted tortoise shell', 4 ),
+	Cat('Sachi', 'tortoise shell', 'diluted tortoise shell', 0 ),
 	Cat('Raven', 'black tripod', '3-legged feline', 4)
 ]
 def index(request):
