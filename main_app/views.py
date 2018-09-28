@@ -1,18 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Cat
 # Create your views here.
 
-class Cat:
-	def __init__(self, name, breed, description, age):
-		self.name = name
-		self.breed = breed
-		self.description = description
-		self.age = age
 
-cats = [
-	Cat('Lolo', 'tabby', 'foul little demon', 3),
-	Cat('Sachi', 'tortoise shell', 'diluted tortoise shell', 0 ),
-	Cat('Raven', 'black tripod', '3-legged feline', 4)
-]
 def index(request):
+	cats = Cat.objects.all()
 	return render(request, 'index.html', {'cats': cats})
